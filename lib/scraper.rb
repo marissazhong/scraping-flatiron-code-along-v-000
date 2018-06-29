@@ -36,7 +36,7 @@ class Scraper
   end
 
   def get_courses
-    courses = get_page.css(".post")
+    courses = get_page.css(".empty-event")
     #puts courses
     #courses = courses.each {|course| course.css(".empty-event")}
     courses
