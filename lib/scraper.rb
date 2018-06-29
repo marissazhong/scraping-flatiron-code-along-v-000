@@ -36,7 +36,7 @@ class Scraper
   end
 
   def event_not_empty?(course)
-    empty = get_page.css(".event-empty")
+    empty = get_page.css(".empty-event")
     empty.include?(course) ? false : true
   end
 
