@@ -37,6 +37,7 @@ class Scraper
 
   def get_courses
     courses = get_page.css(".post")
+    puts courses
     courses = courses.reject {|course| course.css(".empty-event")}
     puts courses
   end
