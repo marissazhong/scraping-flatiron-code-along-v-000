@@ -38,7 +38,7 @@ class Scraper
   def get_courses
     courses = get_page.css("post")
     #puts courses
-    courses = courses.map {|course| puts course if course.css(".empty-event")}
+    courses = courses.map {|course| puts course }
   end
 
   def make_courses
