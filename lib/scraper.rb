@@ -36,7 +36,8 @@ class Scraper
   end
 
   def get_courses
-    courses = get_page.css(".post")
+    courses = get_page.css(".post" && !".event-empty")
+
   end
 
   def make_courses
