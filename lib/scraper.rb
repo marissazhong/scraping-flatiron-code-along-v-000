@@ -46,7 +46,6 @@ class Scraper
       new_course.schedule = course.css(".date")
       new_course.description = course.css("p")
     }
-
   end
 end
 
