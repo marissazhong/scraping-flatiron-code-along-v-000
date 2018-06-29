@@ -49,7 +49,7 @@ class Scraper
     get_courses.each {|course|
       puts course
       #puts get_page.css(".empty-event")[0]
-      if course != get_page.css(".empty-event")[0]
+      if course != "<article class="post empty-event"> <div class="box empty"> </div> </article>"
         #puts course
         new_course = Course.new
         new_course.title = course.css("h2").text
