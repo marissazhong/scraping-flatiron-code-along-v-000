@@ -36,7 +36,7 @@ class Scraper
   end
 
   def event_not_empty?(course)
-    empty = get_page.css(".empty-event")
+    empty = get_page.css(".empty")
     puts empty
     empty.include?(course) ? true : false
   end
@@ -49,7 +49,7 @@ class Scraper
     get_courses.each {|course|
       puts course
       if event_not_empty?(course)
-        puts course
+        #puts course
         new_course = Course.new
         new_course.title = course.css("h2").text
         new_course.schedule = course.css(".date").text
