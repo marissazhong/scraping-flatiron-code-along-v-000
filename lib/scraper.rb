@@ -36,7 +36,7 @@ class Scraper
   end
 
   def get_courses
-    courses = get_page.css((".post" if not ))
+    courses = get_page.css(".post")
     courses.reject!(get_page.css(".empty-event"))
   end
 
