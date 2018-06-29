@@ -35,28 +35,16 @@ class Scraper
     doc = Nokogiri::HTML(html)
   end
 
-  def event_not_empty?(course)
-    empty = get_page.css(".empty")
-    #puts empty
-    empty.include?(course) ? true : false
-  end
-
   def get_courses
     courses = get_page.css(".post")
   end
 
   def make_courses
     get_courses.each {|course|
-      #puts course
-      empty = get_page.css(".post" && ".empty-event")
-      puts empty[0]
-      if course == get_page.css(".post" && ".empty-event")[0]
-        #puts course
         new_course = Course.new
         new_course.title = course.css("h2").text
         new_course.schedule = course.css(".date").text
         new_course.description = course.css("p").text
-      end
     }
   end
 end
