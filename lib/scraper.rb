@@ -50,4 +50,5 @@ class Scraper
 end
 
 test = Scraper.new
-puts test.make_courses
+test.make_courses
+test.print_courses
