@@ -37,6 +37,7 @@ class Scraper
 
   def get_courses
     courses = get_page.css("post")
+    puts courses
   end
 
   def make_courses
