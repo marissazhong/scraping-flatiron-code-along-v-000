@@ -46,4 +46,4 @@ class Scraper
 end
 
 test = Scraper.new
-get_courses
+test.get_courses
