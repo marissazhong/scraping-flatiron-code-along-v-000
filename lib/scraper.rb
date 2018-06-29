@@ -43,7 +43,7 @@ class Scraper
 
   def make_courses
     get_courses.each {|course|
-      if course.include?.css(".empty-event")
+      if course.css(".empty-event")
         new_course = Course.new
         new_course.title = course.css("h2").text
         new_course.schedule = course.css(".date").text
